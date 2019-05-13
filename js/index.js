@@ -46,3 +46,12 @@ let nav = document.querySelector("nav");
 Array.from(nav.children).forEach((e, i) => {
   e.textContent = Object.entries(siteContent.nav)[i][1];
 })
+
+let h1 = document.querySelector('.cta-text>h1');
+h1.textContent = siteContent.cta.h1
+
+let ctaTextButton = document.querySelector('.cta-text>button');
+ctaTextButton.textContent = siteContent.cta.button;
+
+let ctaImage = document.querySelector('#cta-img');
+ctaImage.setAttribute('src', siteContent.cta["img-src"])
