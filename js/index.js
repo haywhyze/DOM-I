@@ -44,8 +44,23 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // nav
 let nav = document.querySelector("nav");
 
+let appendedNav = document.createElement('a');
+appendedNav.setAttribute('href', '#');
+appendedNav.textContent = 'Blog';
+
+let prependedNav = document.createElement('a');
+prependedNav.setAttribute('href', '#');
+prependedNav.textContent = 'Home';
+
 Array.from(nav.children).forEach((e, i) => {
   e.textContent = Object.values(siteContent.nav)[i];
+})
+
+nav.appendChild(appendedNav);
+nav.prepend(prependedNav);
+
+Array.from(nav.children).forEach((e, i) => {
+  e.style.color = 'green';
 })
 
 // cta
