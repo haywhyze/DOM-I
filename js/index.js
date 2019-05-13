@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let nav = document.querySelector("nav");
 
 Array.from(nav.children).forEach((e, i) => {
-  e.textContent = Object.entries(siteContent.nav)[i][1];
+  e.textContent = Object.values(siteContent.nav)[i];
 })
 
 // cta
@@ -64,3 +64,21 @@ ctaTextButton.textContent = siteContent.cta.button;
 
 let ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent.cta["img-src"])
+
+// main content
+let topContent = document.querySelector('.top-content')
+
+let featuresHeading = topContent.children[0].children[0];
+featuresHeading.textContent = siteContent["main-content"]["features-h4"];
+
+let aboutHeading = topContent.children[1].children[0];
+aboutHeading.textContent = siteContent["main-content"]["about-h4"];
+
+let featuresText = topContent.children[0].children[1];
+featuresText.textContent = siteContent["main-content"]["features-content"];
+
+let aboutText = topContent.children[1].children[1];
+aboutText.textContent = siteContent["main-content"]["about-content"];
+
+let middleImage = document.querySelector('#middle-img');
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
