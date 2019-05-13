@@ -72,6 +72,8 @@ Array.from(nav.children).forEach((e, i) => {
 })
 
 // cta
+let cta = document.querySelector('.cta')
+cta.style.paddingTop = '2rem';
 let h1 = document.querySelector('.cta-text>h1');
 // h1.textContent = siteContent.cta.h1
 let h1Text = siteContent.cta.h1.split(" ");
@@ -83,6 +85,9 @@ h1.appendChild(document.createTextNode(h1Text[2]))
 
 let ctaTextButton = document.querySelector('.cta-text>button');
 ctaTextButton.textContent = siteContent.cta.button;
+ctaTextButton.addEventListener('click', e => {
+  e.target.textContent === 'Sign In' ? e.target.textContent = siteContent.cta.button : e.target.textContent = 'Sign In'
+})
 
 let ctaImage = document.querySelector('#cta-img');
 ctaImage.setAttribute('src', siteContent.cta["img-src"])
