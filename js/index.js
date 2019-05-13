@@ -41,6 +41,14 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// header 
+const header = document.getElementsByTagName('header');
+header[0].style.backgroundColor = "#eee";
+header[0].style.padding = "0 1rem 1rem 1rem";
+header[0].style.position = "fixed";
+header[0].style.top = "0";
+header[0].style.width = "880px";
+
 // nav
 let nav = document.querySelector("nav");
 
