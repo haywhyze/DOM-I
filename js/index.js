@@ -82,3 +82,23 @@ aboutText.textContent = siteContent["main-content"]["about-content"];
 
 let middleImage = document.querySelector('#middle-img');
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let bottomContent = document.querySelector('.bottom-content')
+
+let servicesHeading = bottomContent.children[0].children[0];
+servicesHeading.textContent = siteContent["main-content"]["services-h4"];
+
+let productHeading = bottomContent.children[1].children[0];
+productHeading.textContent = siteContent["main-content"]["product-h4"];
+
+let servicesText = bottomContent.children[0].children[1];
+servicesText.textContent = siteContent["main-content"]["services-content"];
+
+let productText = bottomContent.children[1].children[1];
+productText.textContent = siteContent["main-content"]["product-content"];
+
+let visionHeading = bottomContent.children[2].children[0];
+visionHeading.textContent = siteContent["main-content"]["vision-h4"];
+
+let visionText = bottomContent.children[2].children[1];
+visionText.textContent = siteContent["main-content"]["vision-content"];
