@@ -41,14 +41,23 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// nav
 let nav = document.querySelector("nav");
 
 Array.from(nav.children).forEach((e, i) => {
   e.textContent = Object.entries(siteContent.nav)[i][1];
 })
 
+// cta
 let h1 = document.querySelector('.cta-text>h1');
-h1.textContent = siteContent.cta.h1
+// h1.textContent = siteContent.cta.h1
+let h1Text = siteContent.cta.h1.split(" ");
+document.createTextNode(h1Text[0]);
+h1.appendChild(document.createTextNode(h1Text[0]))
+h1.appendChild(document.createElement('br'))
+h1.appendChild(document.createTextNode(h1Text[1]))
+h1.appendChild(document.createElement('br'))
+h1.appendChild(document.createTextNode(h1Text[2]))
 
 let ctaTextButton = document.querySelector('.cta-text>button');
 ctaTextButton.textContent = siteContent.cta.button;
