@@ -52,7 +52,6 @@ Array.from(nav.children).forEach((e, i) => {
 let h1 = document.querySelector('.cta-text>h1');
 // h1.textContent = siteContent.cta.h1
 let h1Text = siteContent.cta.h1.split(" ");
-document.createTextNode(h1Text[0]);
 h1.appendChild(document.createTextNode(h1Text[0]))
 h1.appendChild(document.createElement('br'))
 h1.appendChild(document.createTextNode(h1Text[1]))
@@ -102,3 +101,18 @@ visionHeading.textContent = siteContent["main-content"]["vision-h4"];
 
 let visionText = bottomContent.children[2].children[1];
 visionText.textContent = siteContent["main-content"]["vision-content"];
+
+// contact
+let contact = document.querySelector('.contact');
+contact.children[0].textContent = siteContent.contact["contact-h4"];
+let contactAddress = contact.children[1]
+contactAddress.appendChild(document.createTextNode(siteContent.contact.address.split(" ").slice(0,4).join(' ')))
+contactAddress.appendChild(document.createElement('br'));
+contactAddress.appendChild(document.createTextNode(siteContent.contact.address.split(" ").slice(4).join(' ')))
+contact.children[2].textContent = siteContent.contact.phone;
+contact.children[3].textContent = siteContent.contact.email;
+
+
+// footer
+let footerText = document.querySelector('footer p');
+footerText.textContent = siteContent.footer.copyright;
